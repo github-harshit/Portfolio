@@ -1,0 +1,33 @@
+.container{
+    width: 100%;
+    background-color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content:center;
+    align-items:center;
+    margin:30px;
+     
+}
+ .box{
+    background-color: #f1f1fa;
+    width: 70%;
+    height:250px; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+    border-radius: 10px; /* Rounded corners */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+     
+ }
+ .heading{
+    font-size: 34px;
+    font-weight:900; 
+    color:#0d43a0; 
+    margin-left:40px; 
+ }
+ .image{
+     height: inherit;
+     width: inherit;
+
+ }

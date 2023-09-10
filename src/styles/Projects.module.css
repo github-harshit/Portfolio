@@ -1,0 +1,21 @@
+.container{
+    width: 100%;
+     background-color: #fff;
+     display: flex;
+     flex-direction: column;
+     justify-content:center;
+     align-items:center;
+}
+.box{
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items:center;
+}
+.heading{
+   font-size: 34px;
+   font-weight:900; 
+   color:#0d43a0; 
+   margin-left:40px; 
+}
