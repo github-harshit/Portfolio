@@ -1,4 +1,4 @@
-import React from 'react'; 
+import React, { useState } from 'react'; 
  import styles from "../styles/Skills.module.css"; 
  import db from "../images/db.png"; 
  import javascript from "../images/javascript.png";
@@ -13,13 +13,19 @@ import React from 'react';
 
 
 function Skills() {
+  const [expanded, setExpanded] = useState(false); 
+   const handleClick = ()=>{
+    
+     setExpanded(!expanded); 
+   }
+console.log(expanded); 
   return (
     <div className={styles.container}>
 
- <div className={styles.box}>
+ <div className={ expanded ? styles.boxExpanded : styles.box}>
 <h1 className={styles.heading}>
 
-    Skills Acquired ----------------------------------------------------------------------
+Skills Acquired ----------------------------------------------------------------------
 </h1>
   <div className= {styles.skillBox}>
     <div className={styles.item}>
@@ -119,7 +125,9 @@ function Skills() {
            MongoDB 
          </div>
     </div>
-    <div className={styles.item}>
+    
+   
+    {expanded ?   <> <div className={styles.item}>
         <div className={styles.image}>
        <img src= {mongoose}></img>
         </div>
@@ -127,8 +135,28 @@ function Skills() {
            MongoDB 
          </div>
     </div>
+    <div className={styles.item}>
+    <div className={styles.image}>
+   <img src= {mongoose}></img>
+    </div>
+     <div className={styles.content}>
+       MongoDB 
+     </div>
+</div>
+<div className={styles.item}>
+        <div className={styles.image}>
+       <img src= {mongoose}></img>
+        </div>
+         <div className={styles.content}>
+           MongoDB 
+         </div>
+    </div> </>
+      : null}
+ 
 
   </div>
+  <button onClick={handleClick} className={styles.btn} >{expanded ? "Hide Skills" : "Show More  Skills"}  </button>
+  
  </div>
 
     </div>

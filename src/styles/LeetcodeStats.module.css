@@ -1,19 +1,20 @@
 /* Container for the entire section */
 .container{
   width: 100%;
-  height:300px;
+  height:500px;
   background-color: #fff;
   display: flex;
   flex-direction: column;
   justify-content:center;
   align-items:center;
   margin: 30px;
+
 }
 .problem-stats {
   width: 70%;
     height:250px; 
     display: flex;
-    
+
     background-color: #f1f1fa;
      /* Increased padding for more spacing */
     border-radius: 10px; /* Rounded corners */
@@ -24,9 +25,11 @@
     font-weight:900; 
     color:#0d43a0; 
     margin-left:40px; 
+    margin-top: -100px;
  }
   /* Styling for the 'Total Problems Solved' part */
   .total-solved {
+    
     text-align: center;
     flex: 1; /* Distribute remaining space evenly */
   }

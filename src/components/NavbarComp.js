@@ -2,9 +2,10 @@ import React from 'react';
 import { Link } from 'react-router-dom';
 import styles from "../styles/Navbar.module.css"
  import {useState, useEffect} from "react"; 
-
-
-
+ import GitHubIcon from '@mui/icons-material/GitHub';
+ import LinkedInIcon from '@mui/icons-material/LinkedIn';
+ import TwitterIcon from '@mui/icons-material/Twitter';
+ import { Icon } from '@iconify/react';
 function NavbarComp() {
     const [scroll, setScrolled] = useState(false); 
     useEffect(() => {
@@ -26,36 +27,62 @@ function NavbarComp() {
           window.removeEventListener('scroll', handleScroll);
         };
       }, []);
-      const navbarClass = `${styles.navbarContainer} ${scroll ? styles.navbarContainerScrolled : ''}`
+     
   return (
      <>
-      <div className={navbarClass}>
+      <div className={scroll ? styles.navbarContainerScrolled : styles.navbarContainer}>
 
      
      <div className={styles.navbar}>
      
-      <Link to="/" className={styles.navbarLogo}>
-        Your Logo
-      </Link>
+      <div  className={styles.navbarLogo}>
+       HARSHIT JOSHI
+      </div>
 
      
-      <ul className={styles.navMenu}>
-        <li className={styles.navItem}>
+      <div className={styles.navMenu}>
+        <div className={styles.navItem}>
          
           
           <a href='#skills'> Skills Acquired </a>
           
-        </li>
-        <li className={styles.navItem}>
-          <a href="https://github.com/yourusername" target="_blank" rel="noopener noreferrer">
+        </div>
+        <div className={styles.navItem}>
+          <a href="#github">
             GitHub
           </a>
-        </li>
-        <li className={styles.navItem}>
+        </div>
+        <div className={styles.navItem}>
+          <a href="#leetcode">
+           Leetcode
+          </a>
+        </div>
+        <div className={styles.navItem}>
          
           <a href='#projects'> My Projects</a>
-        </li>
-      </ul>
+        </div>
+        </div>
+        <div className={styles.navIcon}>
+        <div className={styles.navItem}>
+        <a  target= "blank" href='https://github.com/github-harshit'> <GitHubIcon/> </a>
+      </div>
+        <div className={styles.navItem}>
+        <a  target= "blank" href='https://leetcode.com/harshitjoshi250/'> <Icon icon="simple-icons:leetcode" /> </a>
+      </div>
+        <div className={styles.navItem}>
+        <a  target= "blank" href='https://www.linkedin.com/in/harshit-joshi-a2b5b2189/'> <LinkedInIcon/> </a>
+      </div>
+        <div className={styles.navItem}>
+        <a  target= "blank" href='https://twitter.com/Harshit96230938'> <TwitterIcon/> </a>
+      </div>
+
+        </div>
+       
+
+
+     
+
+     
     </div>
     </div>
      </>

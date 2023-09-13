@@ -18,16 +18,17 @@ function ProjectOne() {
          <div className={styles.content}>
               <h1 className={styles.heading}> Unbeatable Tic Tac Toe </h1>
                <p className={styles.date}>Dec 2022- Jan 2023 </p>
+               
+                  <a  className= {styles.link} target='blank' href='https://tictactoeworld.netlify.app/'> Website </a>
+                  <a className= {styles.link} target='blank' href='https://github.com/github-harshit/TicTacToe'>Github</a>
+             
                <p className={styles.about}>Tic Tac Toe App,  offers two engaging play modes: AI and Human. 
                In AI mode, challenge yourself against an unbeatable opponent and 
                in Human mode play with your friends.  
                Real-time notifications keep you in the loop, 
                while the user-friendly interface ensures a
                 seamless and immersive gaming session. 
-                 Whether you're a solo strategist or 
-                competing with friends, 
-                our Tic Tac Toe App promises 
-                endless enjoyment and strategic challenges.</p>
+                 </p>
                <p className={styles.about}>Key Points 
                  <br></br>
                  <ul>
@@ -39,7 +40,9 @@ function ProjectOne() {
                  
                
                </p>
+               <h4>Technologies Used </h4>
                 <div className={styles.skill}>
+                
                  <div className = {styles.item}>React</div>
                  <div className = {styles.item}>CSS</div>
                  <div className = {styles.item}>HTML</div>

@@ -19,6 +19,8 @@ function ProjectTwo() {
         <div className={styles.content}>
              <h1 className={styles.heading}> Memories  </h1>
               <p className={styles.date}>Mar 2023- Apr 2023 </p>
+                 <a  className= {styles.link} target='blank' href='https://memories-app-project-123.netlify.app/'> Website </a>
+                  <a className= {styles.link} target='blank' href='https://github.com/github-harshit/Project-Memories'>Github</a>
               <p className={styles.about}>Memories is a user-friendly application  designed to help individuals
                effortlessly capture and preserve their cherished memories. 
                With this platform, users can create detailed memories, complete with 
@@ -35,7 +37,7 @@ ensuring efficient organisation and easy retrieval </li>
                 </ul>
               
                 
-              
+              <h4> Technologies Used </h4>
               </p>
                <div className={styles.skill}>
                 <div className = {styles.item}>React</div>
@@ -47,7 +49,7 @@ ensuring efficient organisation and easy retrieval </li>
                 <div className = {styles.item}>MongoDB</div>
                  {expanded ?
                  <>
-                 <div className = {styles.item}>MOngoose</div>
+                 <div className = {styles.item}>Mongoose</div>
                 <div className = {styles.item}>Deployment</div>
                 <div className = {styles.item}>Git</div>
                 <div className = {styles.item}>Github</div></> : null  }

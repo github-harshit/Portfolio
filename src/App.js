@@ -5,6 +5,7 @@ import Skills from './components/Skills.js';
  import Projects from "./components/Projects.js"; 
  import GithubContributions from './components/GithubContributions.js';
   import LeetcodeStats from './components/LeetcodeStats.js';
+  import ContactMe from './components/ContactMe.js';
 import { useEffect } from 'react';
 function App() {
     
@@ -48,9 +49,13 @@ function App() {
      <div id='github'>
         <GithubContributions/>
      </div>
-      <div id='letcode'>
+      <div id='leetcode'>
         <LeetcodeStats/>
       </div>
+      <div id='contact'>
+        <ContactMe/>
+      </div>
+    
     </div>
   )
 }

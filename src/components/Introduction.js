@@ -9,8 +9,8 @@ function Introduction() {
         <div className={styles.content}>
              <h2 className={styles.secondary}> Hi,my name is  </h2>
               <h2 className={styles.primary}> Harshit Joshi </h2>
-               <p className={styles.intro}>I have built many industry grade projects from scratch and am armed with many technological skills useful for tech projects. 
-                Check out my projects below. </p>
+               <p className={styles.intro}> Hello, I'm Harshit Joshi, a 22-year-old Computer Science Engineer. I love building websites and solving tricky problems in the world of computers. I'm all about turning creative ideas into real, working websites. Beyond web development, I enjoy tackling tough challenges in computer science. I like to dig deep into complicated problems and come up with smart solutions. My dream is to build things that really matter.
+                 </p>
                 <div className={styles.box}>
                     <div className={styles.item}>
                         <h1 className={styles.upper}> 10+ </h1>
