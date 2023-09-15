@@ -31,7 +31,7 @@ function LeetcodeStats() {
     <div className={styles.container}>
        
        <h1 className={styles.heading}>
-              Leetcode Statistics---------------------------------------------------------------------
+              Leetcode Statistics  -----------------------------------------------------
        </h1>
 
    

@@ -6,27 +6,35 @@ import GitHubIcon from '@mui/icons-material/GitHub';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import TwitterIcon from '@mui/icons-material/Twitter';
 import { Icon } from '@iconify/react';
+import ArrowForwardIcon from '@mui/icons-material/ArrowForward';
 
 
 const ContactMe = () => {
-  const [formData, setFormData] = useState({
-    name: '',
-    email: '',
-    message: '',
-  });
+  const [name, setName] = useState('');
+  const [message, setMessage] = useState('');
+  const [email, setEmail] = useState('');
+  const [activeField, setActiveField] = useState('message');
 
-  const handleChange = (e) => {
+  const handleInputChange = (e) => {
+    e.preventDefault(); 
     const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
+    if (name === 'name') {
+      setName(value);
+    } else if (name === 'message') {
+      setMessage(value);
+    } else if (name === 'email') {
+      setEmail(value);
+    }
   };
 
-  const handleSubmit = (e) => {
-    e.preventDefault();
-    // You can add your form submission logic here, like sending an email
-    console.log('Form submitted with data:', formData);
+  const handleArrowClick = () => {
+    if (activeField === 'message' && message.trim() !== '') {
+      setActiveField('name');
+    } else if (activeField === 'name' && name.trim() !== '') {
+      setActiveField('email');
+    }else if(activeField==='email' && email.trim() !==''){
+         setActiveField('heading'); 
+    }
   };
 
   return (
@@ -34,47 +42,7 @@ const ContactMe = () => {
         
      
         <div className={styles.box}>
-    <div className={styles.contactMe}>
-    <h2>Contact Me</h2>
-     
-      <form onSubmit={handleSubmit}>
-        <div className={styles.formGroup}>
-          <label htmlFor="name">Name</label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            value={formData.name}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="email">Email</label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            value={formData.email}
-            onChange={handleChange}
-            required
-          />
-        </div>
-        <div className={styles.formGroup}>
-          <label htmlFor="message">Message</label>
-          <textarea
-            id="message"
-            name="message"
-            value={formData.message}
-            onChange={handleChange}
-            required
-          ></textarea>
-        </div>
-        <button type="submit" className={styles.fancyButton}>
-          Send
-        </button>
-      </form>
-    </div>
+   
      <div className={styles.content}>
         <h2> Connect with Me </h2>
          <p>
@@ -84,6 +52,68 @@ const ContactMe = () => {
          </p>
         
      </div>
+     <div className={styles.containerSecond}>
+      <form className={styles.form}>
+      {activeField === 'message' && (
+          <div className={styles.inputContainer}>
+            
+              <input
+               type='text'
+                name="message"
+                value={message}
+                onChange={handleInputChange}
+                 placeholder='Write a message for me '
+              ></input>
+           
+            {message.trim() !== '' && (
+              <ArrowForwardIcon className={styles.icon} onClick={handleArrowClick}></ArrowForwardIcon>
+            )}
+          </div>
+        )}
+
+        {activeField === 'name' && (
+          <div className={styles.inputContainer}>
+            
+              <input
+                type="text"
+                name="name"
+                value={name}
+                onChange={handleInputChange}
+                placeholder='Your Name'
+              />
+            
+            {name.trim() !== '' && (
+              <ArrowForwardIcon className= { styles.icon}  onClick={handleArrowClick}></ArrowForwardIcon>
+            )}
+          </div>
+        )}
+
+        
+
+        {activeField === 'email' && (
+          <div className={styles.inputContainer}>
+            
+              <input
+                type="email"
+                name="email"
+                value={email}
+                onChange={handleInputChange}
+                placeholder='Your Email'
+              />
+          
+            {email.trim() !== '' && (
+              <ArrowForwardIcon className={styles.icon}  onClick={handleArrowClick}></ArrowForwardIcon>
+            )}
+          </div>
+        )}
+
+        {activeField==='heading' && (
+            <h3 className={styles.grateful}> Thank you I will contact you shortlly</h3>
+        )}
+      </form>
+    </div>
+
+
      </div>
      <div className={styles.navIcon}>
         <div className={styles.navItem}>

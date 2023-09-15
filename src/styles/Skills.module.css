@@ -58,10 +58,14 @@
      background-color: #4883e9;
      border-radius: 10px;
   }
+  
   img {
      height: inherit;
      width: inherit;
      object-fit: contain;
+  }
+  .image img:hover{
+    transform: scale(1.2);
   }
    .content{
      height:20%;

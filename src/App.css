@@ -1,1 +1,41 @@
 
+/* Styling for the outer container */
+.containerSecond {
+    width: 70%;
+    
+    margin: 0 auto;
+    padding: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    background-color: #fff;
+  }
+  .form{
+     width: 80%;
+  }
+  
+  /* Styling for the input containers */
+  .inputContainer {
+    width: 100%;
+    margin-bottom: 20px;
+    display: flex;
+    
+    align-items: center;
+
+  }
+ 
+  .input-container input
+   {
+    width: 70%;
+    padding: 10px;
+   
+  
+  }
+ 
+  .icon{
+   
+   
+    cursor: pointer;
+  }
+  
+ 
+  

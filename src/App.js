@@ -6,6 +6,7 @@ import Skills from './components/Skills.js';
  import GithubContributions from './components/GithubContributions.js';
   import LeetcodeStats from './components/LeetcodeStats.js';
   import ContactMe from './components/ContactMe.js';
+  import ContactForm from './components/ContactForm.js';
 import { useEffect } from 'react';
 function App() {
     
@@ -55,6 +56,7 @@ function App() {
       <div id='contact'>
         <ContactMe/>
       </div>
+      
     
     </div>
   )

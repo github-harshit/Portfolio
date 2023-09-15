@@ -10,6 +10,10 @@ import React, { useState } from 'react';
  import mongoose from "../images/mongoose.png"
  import git from "../images/git.png"; 
  import rest from "../images/Rest.png"; 
+import java from "../images/java.png";
+import redux from "../images/redux.png"; 
+ import typescript from "../images/typescript.png"; 
+ import dsa from "../images/dsa.png"
 
 
 function Skills() {
@@ -46,6 +50,14 @@ Skills Acquired ----------------------------------------------------------------
     </div>
     <div className={styles.item}>
         <div className={styles.image}>
+       <img src= {redux}></img>
+        </div>
+         <div className={styles.content}>
+          Redux 
+         </div>
+    </div>
+    <div className={styles.item}>
+        <div className={styles.image}>
        <img src= {node}></img>
         </div>
          <div className={styles.content}>
@@ -70,6 +82,31 @@ Skills Acquired ----------------------------------------------------------------
     </div>
     <div className={styles.item}>
         <div className={styles.image}>
+       <img src= {typescript}></img>
+        </div>
+         <div className={styles.content}>
+          Typescript 
+         </div>
+    </div>
+    <div className={styles.item}>
+        <div className={styles.image}>
+       <img src= {rest}></img>
+        </div>
+         <div className={styles.content}>
+          REST
+         </div>
+    </div>
+    <div className={styles.item}>
+        <div className={styles.image}>
+       <img src= {git}></img>
+        </div>
+         <div className={styles.content}>
+            Git
+         </div>
+    </div>
+
+    <div className={styles.item}>
+        <div className={styles.image}>
        <img src= {html}></img>
         </div>
          <div className={styles.content}>
@@ -92,65 +129,32 @@ Skills Acquired ----------------------------------------------------------------
            Mongoose
          </div>
     </div>
-    <div className={styles.item}>
-        <div className={styles.image}>
-       <img src= {git}></img>
-        </div>
-         <div className={styles.content}>
-            Git
-         </div>
-    </div>
-    <div className={styles.item}>
-        <div className={styles.image}>
-       <img src= {rest}></img>
-        </div>
-         <div className={styles.content}>
-          REST
-         </div>
-    </div>
     
-    <div className={styles.item}>
-        <div className={styles.image}>
-       <img src= {mongoose}></img>
-        </div>
-         <div className={styles.content}>
-           MongoDB 
-         </div>
-    </div>
-    <div className={styles.item}>
-        <div className={styles.image}>
-       <img src= {mongoose}></img>
-        </div>
-         <div className={styles.content}>
-           MongoDB 
-         </div>
-    </div>
+    
+    
+    
+ 
     
    
-    {expanded ?   <> <div className={styles.item}>
+    {expanded ?   <>
+      <div className={styles.item}>
         <div className={styles.image}>
-       <img src= {mongoose}></img>
+       <img src= {java}></img>
         </div>
          <div className={styles.content}>
-           MongoDB 
+           Java 
          </div>
     </div>
-    <div className={styles.item}>
-    <div className={styles.image}>
-   <img src= {mongoose}></img>
-    </div>
-     <div className={styles.content}>
-       MongoDB 
-     </div>
-</div>
-<div className={styles.item}>
+    
+     <div className={styles.item}>
         <div className={styles.image}>
-       <img src= {mongoose}></img>
+       <img  src= {dsa}></img>
         </div>
          <div className={styles.content}>
-           MongoDB 
+          DSA
          </div>
-    </div> </>
+    </div>
+    </>
       : null}
  
 

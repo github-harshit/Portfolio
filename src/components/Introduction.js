@@ -1,7 +1,7 @@
 import React from 'react'; 
 import HeroImage from "../images/HeroImage.png"; 
 import styles from "../styles/Introduction.module.css"
-
+import HarshitCircle from "../images/HarshitCircle.png"
 function Introduction() {
   return (
     <div className={styles.container}>
@@ -32,7 +32,7 @@ function Introduction() {
         </div>
          <div className={styles.image}>
             <div className={styles.imageContainer}>
-               <img src={HeroImage}></img>
+               <img src={HarshitCircle}></img>
             </div>
             
          </div>
